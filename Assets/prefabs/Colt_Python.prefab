@@ -91,7 +91,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3844b3f821d353e429818a52dadf558a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocity: 1
+  velocity: 5
   bulletsHolder: {fileID: 0}
   bulletPrefab: {fileID: 5488506819651863386, guid: bc17fb20ef5c90146bb48c396d10cd0e,
     type: 3}

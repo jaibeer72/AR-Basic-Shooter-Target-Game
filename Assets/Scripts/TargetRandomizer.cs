@@ -11,6 +11,7 @@ public class TargetRandomizer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Screen.orientation = ScreenOrientation.Portrait;
         targets = GameObject.FindGameObjectsWithTag("Target");
         for (int i = 0; i < targets.Length; i++)
         {
@@ -21,7 +22,7 @@ public class TargetRandomizer : MonoBehaviour
 
     public Vector3 retRandLocation()
     {
-        return Random.insideUnitSphere * 5;
+        return Random.insideUnitSphere * 10;
     }
 
     public GameObject AssignTargetPosition(GameObject target)
