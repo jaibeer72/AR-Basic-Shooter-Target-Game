@@ -17,9 +17,11 @@ public class LaunchSourceBehivior : MonoBehaviour
         {
             nextfire = Time.time + fireRate;
 
-            GameObject bullet = (GameObject)Instantiate(bulletPrefab, barrel.position, Quaternion.identity, bulletsHolder);
+            GameObject bullet = Instantiate(bulletPrefab, barrel.position, barrel.rotation, bulletsHolder) as GameObject;
 
-            bullet.GetComponent<Rigidbody>().velocity = bullet.transform.forward * velocity; 
+            bullet.GetComponent<Rigidbody>().velocity = bullet.transform.forward * velocity;
+
+            Destroy(bullet, 5.0f);
         }
     }
 }
