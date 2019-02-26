@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: VuforiaConfiguration
   m_EditorClassIdentifier: 
   vuforia:
-    vuforiaLicenseKey: 
+    vuforiaLicenseKey: AaZ+6vX/////AAABmZU/JvLr/Epdml7ADXEPp/9NDKUfOd6ACkFiN7rWZzfPPBvoYSErYtpxcALB0EVOqIX7QLHe6Dg3VPsBsp0jAY6H8SIEpdIe/Zxqi7IeSoMS+VuhHyrLAHfmRiq1Wo3KRdtahVSyMYeNogkwENSKDiYDWYETht2UBuodKbUQ7lnlf+2Yv2J5sJOusRBYVeE3UAMj+ZgBDsxAasUxzRhDxuZTuJ0E6I4X8kfiLx4gpSUzxBbRIqkjSxPD8gx01LRNdMzX+xR/UIR5Alzq9DJ4znrh251GB/4joBQrpZ7Hx1g5oJhKyKvWRio3Z7IBnyGkyo0SJLBpgxNvvdPXBDtR+i9BP1t0eESfj9W4Oq37h+Kz
     ufoLicenseKey: QVNVcktSTC8vLy8vQUFBQUtObXE5azF1bTBUTHBwaTc4emV3eHlJa0M3U3lrVG9WbmF3UzdacEViR3p3T1l0U1NXemdPc05JUlZkNi9ROHl4WUMxdlB3bnlFd1BLTGtHMmcvOWkyWFVKTDIxb0Rldmt4NnJDZ1JTcEtNeElwWGJiR1c5VzZBaGxjZ1MwL09WVkNOdnlKTm43U2gxWlRrWGQ2RVJ5TW9mT3AzdktvREIzY2xpVi96dnVMTFM5ZkRxcnM2dDlWSHhoS0J4NlRFOEZCUThmMWRHR3hwNVBlMEZXZHlpZWRYaUtUQnNxQUpmVVl6WnRDSmZDWWRzWlFJdmhiK05IOHpNMlNGY0Q1QmIyRzRIOGJES1JNRDBvZGpoOG9FbkdPSFJPZnJOOEdTcXVBendWcUNjVDIvelZzd2tmMm1YbkY3RW8yWGNtVmttcW8yM0lrWW84SXgyN2ltTmNDMW9SSXQwOTZaQzQ1NXZMTDlQZUx5a3Z4ZEQ=
     delayedInitialization: 0
     cameraDeviceModeSetting: -1
@@ -48,8 +48,9 @@ MonoBehaviour:
   videoBackground:
     clippingMode: 0
     numDivisions: 2
-    videoBackgroundShader: {fileID: 0}
-    matteShader: {fileID: 0}
+    videoBackgroundShader: {fileID: 4800000, guid: f40623b353e2f1943b1b3ba42975db7a,
+      type: 3}
+    matteShader: {fileID: 4800000, guid: 66d0d78a3000021448b598bb54a3bfdf, type: 3}
     videoBackgroundEnabled: 1
   deviceTracker:
     autoInitTracker: 1
