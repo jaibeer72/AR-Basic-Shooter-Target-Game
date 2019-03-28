@@ -24,7 +24,7 @@ public class TargetHitScript : MonoBehaviour
         {
             addScore(Vector3.Distance(other.transform.position, transform.position)); 
             other.gameObject.SetActive(false);
-            transform.position = Random.insideUnitSphere * 5;
+            transform.position = GetComponent<TargetRandomizer>().retRandLocation();
             transform.LookAt(Player);
         }
     }

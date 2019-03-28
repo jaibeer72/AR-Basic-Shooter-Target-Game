@@ -13,7 +13,10 @@ public class CountDownTimer : MonoBehaviour
     float timer; 
     public bool canCount = true;
     public bool doOnce = false;
-    public bool hasGameStarted = false; 
+    public bool hasGameStarted = false;
+    public GameObject disableMainGame;
+    public GameObject displayTotalScore;
+    public GameObject scoreScript; 
     // Start is called before the first frame update
     void Start()
     {
@@ -37,6 +40,9 @@ public class CountDownTimer : MonoBehaviour
                 doOnce = true;
                 uitimer.text = "0.00";
                 timer = 0.0f;
+                disableMainGame.SetActive(false);
+                scoreScript.GetComponent<ScoreScript>().TotalScore(); 
+                displayTotalScore.SetActive(true); 
             }
         }
     }

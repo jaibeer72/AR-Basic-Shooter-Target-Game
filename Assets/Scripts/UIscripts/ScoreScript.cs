@@ -7,6 +7,7 @@ public class ScoreScript : MonoBehaviour
 {
     public static int score;
     public Text scoreText;
+    public Text totalScore; 
 
     private void Start()
     {
@@ -16,5 +17,9 @@ public class ScoreScript : MonoBehaviour
     private void Update()
     {
         scoreText.text = "Score = "+ score; 
+    }   
+    public void TotalScore()
+    {
+        totalScore.text = "Your Score Is " + score; 
     }
 }
