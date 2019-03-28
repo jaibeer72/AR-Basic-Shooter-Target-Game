@@ -92,6 +92,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isEaten: 0
+  rotateAround: {x: 0, y: 1, z: 0}
+  rotationSpeed: 20
 --- !u!135 &1326403007572795949
 SphereCollider:
   m_ObjectHideFlags: 0

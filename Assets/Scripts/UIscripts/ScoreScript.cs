@@ -1,7 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI; 
+using UnityEngine.UI;
+using UnityEngine.SceneManagement; 
 
 public class ScoreScript : MonoBehaviour
 {
@@ -21,5 +22,9 @@ public class ScoreScript : MonoBehaviour
     public void TotalScore()
     {
         totalScore.text = "Your Score Is " + score; 
+    }
+    public void Restart()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex); 
     }
 }
