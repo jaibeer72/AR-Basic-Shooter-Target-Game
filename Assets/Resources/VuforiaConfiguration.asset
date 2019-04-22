@@ -20,9 +20,7 @@ MonoBehaviour:
     maxSimultaneousImageTargets: 1
     maxSimultaneousObjectTargets: 1
     useDelayedLoadingObjectTargets: 0
-    cameraDirection: 0
-    mirrorVideoBackground: 0
-    version: 8.0.10
+    version: 8.1.7
     eulaAcceptedVersions: '{"Values":["0.0","8.0","7.1","7.2","7.5","7.7","8.1"]}'
   digitalEyewear:
     cameraOffset: 0.06
@@ -45,6 +43,8 @@ MonoBehaviour:
       DistortionCoefficients: {x: 0, y: 0}
       FieldOfView: {x: 0, y: 0, z: 0, w: 0}
       ContainsMagnet: 0
+  database:
+    disableModelExtraction: 0
   videoBackground:
     clippingMode: 0
     numDivisions: 2
@@ -65,6 +65,5 @@ MonoBehaviour:
     autoStartTracker: 0
   webcam:
     deviceNameSetInEditor: Logitech HD Webcam C525
-    flipHorizontally: 0
     turnOffWebCam: 0
     renderTextureLayer: 30
