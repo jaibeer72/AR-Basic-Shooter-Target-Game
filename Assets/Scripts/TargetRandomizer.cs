@@ -1,19 +1,35 @@
-﻿using System.Collections;
+﻿using System.Collections; 
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI; 
+
+
+[System.Serializable]
+public struct FoodTypeManager
+{
+    public GameObject foodPrefab;
+    public int score;
+    public bool isEdible;
+
+    public FoodTypeManager(GameObject  prefab, int Score , bool isPositive )
+    {
+        foodPrefab = prefab;
+        score = Score;
+        isEdible = isPositive; 
+    }
+}
 
 public class TargetRandomizer : MonoBehaviour
 {
-
     public Transform Player;
-    public GameObject[] foodPrefabs;
+    public FoodTypeManager[] foodTypeManager;
     public int maxFoodInScean = 5; 
     public Transform destination;
     public Vector2 maxMinAroundX = new Vector2(-45f, 45f);
     public Vector2 maxMinAroundY = new Vector2(0, 360f);
     float radius;
-    Dictionary<int, GameObject> dictonaryInSceanFood = new Dictionary<int, GameObject>(); 
-
+    Dictionary<int, FoodTypeManager> dictonaryInSceanFood = new Dictionary<int, FoodTypeManager>();
+    public Canvas canvasPrefab; 
     // Start is called before the first frame update
     void Start()
     {
@@ -29,14 +45,32 @@ public class TargetRandomizer : MonoBehaviour
     {
         for (int i = 0; i < dictonaryInSceanFood.Count; i++)
         {
-            if(dictonaryInSceanFood[i].GetComponent<CheckTrigger>().isEaten == true)
+            if(dictonaryInSceanFood[i].foodPrefab.GetComponent<CheckTrigger>().isEaten == true)
             {
-                Destroy(dictonaryInSceanFood[i]); 
+                Destroy(dictonaryInSceanFood[i].foodPrefab);
+                InstantiateCanvasScore(dictonaryInSceanFood[i].score,dictonaryInSceanFood[i].foodPrefab.transform);
                 dictonaryInSceanFood[i] = InstantiateFood();
-                ScoreScript.score++; 
             } 
            
         }
+    }
+
+    private void InstantiateCanvasScore(int score, Transform transfrom)
+    {
+        Canvas scorePopUp = Instantiate(canvasPrefab, transfrom.position, transform.rotation) as Canvas;
+        if (score < 0)
+        {
+            scorePopUp.GetComponentInChildren<Text>().color = Color.red; 
+            scorePopUp.GetComponentInChildren<Text>().text = "" + score.ToString();
+            
+        }
+        else
+        {
+            scorePopUp.GetComponentInChildren<Text>().color = Color.green;
+            scorePopUp.GetComponentInChildren<Text>().text = "+" + score.ToString();
+        }
+        ScoreScript.score += score;
+        Destroy(scorePopUp.gameObject,2f);
     }
 
     public Vector3 retRandLocation()
@@ -59,11 +93,12 @@ public class TargetRandomizer : MonoBehaviour
         return target;
     } 
 
-    public GameObject InstantiateFood()
+    public FoodTypeManager InstantiateFood()
     {
-        int index = Random.Range(0, foodPrefabs.Length);
-        GameObject food = Instantiate(foodPrefabs[index], retRandLocation(), transform.rotation, transform) as GameObject;
-        food.transform.LookAt(Player.transform); 
-        return food; 
+        int index = Random.Range(0, foodTypeManager.Length);
+        GameObject food = Instantiate(foodTypeManager[index].foodPrefab, retRandLocation(), transform.rotation, transform) as GameObject;
+        food.transform.LookAt(Player.transform);
+        FoodTypeManager foodDictAdd = new FoodTypeManager(food, foodTypeManager[index].score, foodTypeManager[index].isEdible); 
+        return foodDictAdd; 
     }
 }

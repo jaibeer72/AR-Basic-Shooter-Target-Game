@@ -17,7 +17,8 @@ public class ScoreScript : MonoBehaviour
 
     private void Update()
     {
-        scoreText.text = "Score = "+ score; 
+        if (score < 0) { score = 0; }
+        scoreText.text = "Score = "+ score.ToString(); 
     }   
     public void TotalScore()
     {

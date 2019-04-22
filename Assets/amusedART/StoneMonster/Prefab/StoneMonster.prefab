@@ -310,8 +310,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 0}
-  speed: 0.5
-  stoppoingDistance: 0.5
+  speed: 0.2
+  stoppoingDistance: 0.3
+  monsterState: 0
 --- !u!82 &6181886156413501187
 AudioSource:
   m_ObjectHideFlags: 0

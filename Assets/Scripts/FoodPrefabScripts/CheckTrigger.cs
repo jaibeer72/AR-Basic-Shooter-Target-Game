@@ -25,7 +25,7 @@ public class CheckTrigger : MonoBehaviour
             other.GetComponentInParent<AudioSource>().Play();
             
             other.GetComponentInParent<MonsterController>().monsterState = MonsterState.isEating;
-            other.transform.LookAt(this.transform);
+            other.transform.LookAt(this.transform.forward);
             isEaten = true; 
         }
     }
