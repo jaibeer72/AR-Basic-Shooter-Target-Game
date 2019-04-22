@@ -35,10 +35,10 @@ MonoBehaviour:
     value: 1
   shutterAngle:
     overrideState: 1
-    value: 242
+    value: 6
   sampleCount:
     overrideState: 1
-    value: 15
+    value: 32
 --- !u!114 &114769627884638406
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -54,10 +54,10 @@ MonoBehaviour:
   active: 1
   enabled:
     overrideState: 1
-    value: 1
+    value: 0
   filtering:
     overrideState: 1
-    value: {x: 58.506947, y: 95}
+    value: {x: 47.618057, y: 95}
   minLuminance:
     overrideState: 0
     value: 0
