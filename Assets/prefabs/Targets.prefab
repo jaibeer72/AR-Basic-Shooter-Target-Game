@@ -50,7 +50,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 55573341}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -123,4 +123,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player: {fileID: 0}
-  targets: []
+  foodTypeManager: []
+  maxFoodInScean: 5
+  destination: {fileID: 0}
+  maxMinAroundX: {x: -45, y: 45}
+  maxMinAroundY: {x: 0, y: 360}
+  canvasPrefab: {fileID: 0}
